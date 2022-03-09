@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./Layout/Header/Header";
 import Hero from "./Pages/Hero/Hero.jsx";
 function App() {
