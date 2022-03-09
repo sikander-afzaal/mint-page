@@ -1,0 +1,173 @@
+.hero-section {
+  position: relative;
+  min-height: 1330px;
+  background: url("../../Assets/header-bg.png") no-repeat center center;
+  background-size: cover;
+  padding-top: 140px;
+  z-index: 3;
+}
+
+.hero-section .brand-name {
+  font-size: 137px;
+  line-height: 133px;
+  text-align: center;
+  font-family: "Olde English";
+  background: -webkit-linear-gradient(#ff7378, #ec2028);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 48px;
+}
+
+.hero-section p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 10px;
+}
+.mint-outer-wrapper {
+  padding: 120px 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mint-outer-wrapper .gif-img {
+  border-radius: 20px;
+}
+
+.mint-outer-wrapper .mint-calculator {
+  width: 80%;
+  margin: 30px auto;
+  min-height: 300px;
+  padding: 40px 25px;
+  color: #fff;
+  background: radial-gradient(79.42% 100% at 50% 0%, #ff7378 0%, #ec2028 100%);
+  -webkit-box-shadow: 0px 20px 20px rgbs(0, 0, 0, 0.5);
+  box-shadow: 0px 20px 20px rgbs(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  border-radius: 20px;
+}
+
+.mint-outer-wrapper .mint-calculator .mint-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+
+.mint-outer-wrapper .mint-calculator p {
+  text-align: left;
+}
+
+.mint-outer-wrapper .mint-calculator .payment-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.mint-outer-wrapper .mint-calculator .payment-info .payment-img {
+  width: 112px;
+  height: 112px;
+  border-radius: 20px;
+}
+
+.mint-outer-wrapper .mint-calculator .payment-info .payment-info-text {
+  text-align: right;
+}
+
+.mint-outer-wrapper .mint-calculator .payment-info p {
+  text-align: right;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0px;
+}
+
+.mint-outer-wrapper .mint-calculator .payment-info .eth-number {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 10px 15px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-number .number-text {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 26px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-number .chubby-max {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px 0px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-number .minus,
+.mint-outer-wrapper .mint-calculator .chubby-number .plus {
+  cursor: pointer;
+  z-index: 10;
+  margin: 0px 20px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-total {
+  margin-top: 40px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mint-outer-wrapper .mint-calculator .chubby-total .eth-number {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+.mint-outer-wrapper .cta-btn {
+  margin-top: 25px;
+  background: #fff;
+  display: block;
+  color: #ec2028;
+}
+.cta-btn {
+  display: inline-block;
+  background: radial-gradient(79.42% 100% at 50% 0%, #ff7378 0%, #ec2028 100%);
+  -webkit-box-shadow: 0px 30px 40px -25px #ec2028;
+  box-shadow: 0px 30px 40px -25px #ec2028;
+  border-radius: 10px;
+  padding: 23px 49px;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Fredoka One", cursive;
+}
+.cta-btn {
+  text-decoration: none !important;
+}

@@ -1,13 +1,470 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Reset CSS */
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* FONT CSS */
+@font-face {
+  font-family: "Olde English";
+  src: url("./Assets/fonts/OldeEnglish-Regular.eot");
+  src: url("./Assets/fonts/OldeEnglish-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Assets/fonts/OldeEnglish-Regular.woff2") format("woff2"),
+    url("./Assets/fonts/OldeEnglish-Regular.woff") format("woff"),
+    url("./Assets/fonts/OldeEnglish-Regular.ttf") format("truetype"),
+    url("./Assets/fonts/OldeEnglish-Regular.svg#OldeEnglish-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-ExtraLight.eot");
+  src: url("./Assets/fonts/Inter-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Assets/fonts/Inter-ExtraLight.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-ExtraLight.woff") format("woff"),
+    url("./Assets/fonts/Inter-ExtraLight.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-ExtraLight.svg#Inter-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-ExtraBold.eot");
+  src: url("./Assets/fonts/Inter-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Assets/fonts/Inter-ExtraBold.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-ExtraBold.woff") format("woff"),
+    url("./Assets/fonts/Inter-ExtraBold.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-ExtraBold.svg#Inter-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Black.eot");
+  src: url("./Assets/fonts/Inter-Black.eot?#iefix") format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Black.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Black.woff") format("woff"),
+    url("./Assets/fonts/Inter-Black.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Black.svg#Inter-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Bold.eot");
+  src: url("./Assets/fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Bold.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Bold.woff") format("woff"),
+    url("./Assets/fonts/Inter-Bold.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Bold.svg#Inter-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Thin.eot");
+  src: url("./Assets/fonts/Inter-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Thin.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Thin.woff") format("woff"),
+    url("./Assets/fonts/Inter-Thin.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Thin.svg#Inter-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Regular.eot");
+  src: url("./Assets/fonts/Inter-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Regular.woff") format("woff"),
+    url("./Assets/fonts/Inter-Regular.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Regular.svg#Inter-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-SemiBold.eot");
+  src: url("./Assets/fonts/Inter-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Assets/fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-SemiBold.woff") format("woff"),
+    url("./Assets/fonts/Inter-SemiBold.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-SemiBold.svg#Inter-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Light.eot");
+  src: url("./Assets/fonts/Inter-Light.eot?#iefix") format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Light.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Light.woff") format("woff"),
+    url("./Assets/fonts/Inter-Light.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Light.svg#Inter-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Assets/fonts/Inter-Medium.eot");
+  src: url("./Assets/fonts/Inter-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./Assets/fonts/Inter-Medium.woff2") format("woff2"),
+    url("./Assets/fonts/Inter-Medium.woff") format("woff"),
+    url("./Assets/fonts/Inter-Medium.ttf") format("truetype"),
+    url("./Assets/fonts/Inter-Medium.svg#Inter-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter";
+  color: #2c3032;
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1216px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1216px;
+  }
+}
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1218px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+@media (max-width: 768px) {
+  .mint-outer-wrapper .mint-calculator {
+    width: 100%;
+  }
+  .mint-outer-wrapper .cta-btn {
+    max-width: 100% !important;
+  }
+  .nav {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    -webkit-transition: opacity 1s, -webkit-transform 0.7s;
+    transition: opacity 1s, -webkit-transform 0.7s;
+    transition: transform 0.7s, opacity 1s;
+    transition: transform 0.7s, opacity 1s, -webkit-transform 0.7s;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+    overflow: hidden;
+  }
+  .nav.show {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .hamburger.fixed {
+    position: fixed !important;
+  }
+  .header .header-logo {
+    max-width: 122px;
+    margin-right: 50px;
+  }
+  .header .social-icons li,
+  .header .social-icons li a img,
+  .header .social-icons li a {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .header .social-icons li a {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .social-icons li {
+    margin-right: 20px;
+  }
+  .hero-section .brand-name {
+    font-size: 60px;
+    line-height: 58px;
+  }
+  .hero-section p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .swiper-slide {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+    min-height: 350px;
+  }
+  .swiper-slide.swiper-slide-active {
+    width: 40% !important;
+  }
+  .swiper-wrapper {
+    min-height: 400px;
+  }
+  .swiper-slide.swiper-slide-active::after {
+    top: 103%;
+  }
+  .hero-section .cta-btn {
+    max-width: 335px;
+    padding: 23px 22px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 45px;
+  }
+  .cta-btn {
+    max-width: 335px;
+    padding: 23px 22px;
+    font-size: 16px;
+  }
+  .section-title {
+    font-size: 56px;
+    line-height: 46px;
+  }
+  .hero-section {
+    min-height: 1000px;
+  }
+  .header .menu-links li {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header .menu-links li a {
+    font-size: 24px;
+  }
+  .header .menu-links {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .header .menu-links li {
+    margin-right: 10px;
+  }
+  .header .menu-links li a {
+    font-size: 18px;
+  }
+  .section-1,
+  .section-2,
+  .section-3,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
